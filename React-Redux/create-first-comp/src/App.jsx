@@ -1,5 +1,6 @@
 import agbutton from "./agbutton";
 import Helo from "./hello";
+import Random from "./Random";
 
 function App() {
 return <div>
@@ -9,6 +10,7 @@ return <div>
   <agbutton></agbutton>
 <button>Subscribe </button>
 <Helo></Helo>
+<Random></Random>
  </div>
 
 }
