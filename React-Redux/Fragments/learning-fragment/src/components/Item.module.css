@@ -6,3 +6,7 @@
 .ag-item {
   background-color: black;
 }
+
+.button {
+   float: right;
+}
