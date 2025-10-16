@@ -1,4 +1,4 @@
-class User {
+className User {
    constructor(username){
     this.username = username
    }
@@ -15,7 +15,7 @@ class User {
 const hitesh  = new User("hitesh")
 // console.log(hitesh.createId())
 
-class Teacher extends User {
+className Teacher extends User {
     constructor(username, email) {
       super(username)
        this.email = email

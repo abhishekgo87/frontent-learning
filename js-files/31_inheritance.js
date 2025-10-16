@@ -1,4 +1,4 @@
-class   User {
+className   User {
   constructor(username){
     this.username = username
   }
@@ -8,7 +8,7 @@ class   User {
   }
 }
 
-class Teacher extends User{
+className Teacher extends User{
 
   constructor(username, email, password){
      this.email = email

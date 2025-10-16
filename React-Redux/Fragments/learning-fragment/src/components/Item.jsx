@@ -4,12 +4,12 @@ const Item = ({ foodItem,  bought,handleBuyButton }) => {
   
   
   return (
-    <li className={`${styles["Ag-item"]} list-group-item ${bought &&
+    <li classNameName={`${styles["Ag-item"]} list-group-item ${bought &&
 
     'active'} `}>
-      <span className={styles["ag-span"]}>{foodItem}</span>
+      <span classNameName={styles["ag-span"]}>{foodItem}</span>
       <button
-        className={`${styles.button} btn btn-info`}
+        classNameName={`${styles.button} btn btn-info`}
         onClick={handleBuyButton}
       >
         {" "}
