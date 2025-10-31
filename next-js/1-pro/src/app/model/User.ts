@@ -14,7 +14,61 @@ const MessageSchema: Schema<Message> = new Schema({
     },
     createdAt: {
       type: Date,
-      required: true
+      required: true,
       default: Date.now
     }
 })
+
+ export interface User extends Document{
+   username: string;
+   email: string;
+   password: string;
+   verifyCode: string;
+   verifyCodeExpiry: Date;
+   isVerified: boolean;
+   isAcceptingMessage: boolean;
+   message: Message[]
+}
+
+const UserSchema: Schema<User> = new Schema({
+    username: {
+      type: String,
+      required: [true, "Username is required"],
+      trim: true,
+      unique: true
+    },
+    email: {
+      type: String,
+      required: [true, "Email is required"],
+       unique: true,
+       match: [/.+\@.+\..+/, 'please use a valid email adress']
+    },
+    password: {
+  type: String,
+  required: [true, "Password is required"],
+
+    },
+   verifyCode: {
+  type: String,
+  required: [true, "Verify code  is required"],
+
+    },
+ verifyCodeExpiry: {
+  type: Date,
+  required: [true, "Verify code  is required"],
+
+    },
+ isVerified: {
+  type: Boolean,
+  default: false,
+    },
+  isAcceptingMessage: {
+  type: Boolean,
+  default: true,
+    },
+  message: [MessageSchema]
+})
+
+const UserModel = (moongoose.models.User as moongoose.Model<User>) || moongoose.model<User>("User", UserSchema)
+
+export default UserModel;
