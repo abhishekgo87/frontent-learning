@@ -9,7 +9,7 @@ let name = "Abhishek"   //string data type
 
  //object
 
- console.log(typeof "Abhishek")  // string
+ console.log(typeof "Abhi")  // string
  console.log(typeof null);  // object
  console.log(typeof undefined); //  undefined
 
